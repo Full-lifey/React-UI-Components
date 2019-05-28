@@ -16,8 +16,23 @@ class App extends React.Component{
     }
   }
   buttonClick = (event) => {
-    console.log(event.target)
-    this.setState({keyPress: [...this.state.keyPress, event.target.textContent], calcDisplay: `${this.state.keyPress.join(' ')} ${event.target.textContent}`})
+    if (event.target.textContent === 'clear'){
+      this.setState({calcDisplay: '0', keyPress: []})
+    }
+    else if(event.target.textContent === '='){
+      let mathArr = this.state.keyPress.map(digit => {
+        if (digit === 'x') return '*'
+        else if (digit === '÷') return '/'
+        else return digit
+      })
+      mathArr = mathArr.join('')
+      // console.log((mathArr))
+      this.setState({calcDisplay: eval(mathArr), keyPress: []})
+      // console.log(this.state)
+    }
+    else{
+      this.setState({keyPress: [...this.state.keyPress, event.target.textContent], calcDisplay: `${this.state.keyPress.join('')}${event.target.textContent}`})
+    }
   }
   render(){
     return (
