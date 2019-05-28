@@ -20,6 +20,10 @@
     border-radius: 10px;
 }
 
+.card-box .img-box{
+    height: 267px;
+}
+
 .card-box .img-box img{
     border-radius: 10px;
     width: 100%;
