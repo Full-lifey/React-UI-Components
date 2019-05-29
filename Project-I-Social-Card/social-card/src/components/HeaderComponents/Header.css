@@ -1,1 +1,37 @@
 /* All styles for your header Components live here */
+
+.header-container{
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-container img{
+    width: 75px;
+}
+.header-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-boxes{
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.header-boxes .headertitle{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.header-tag{
+    margin: 10px;
+}
+
+.header-boxes .header-tag{
+    color: grey;
+}
+
+.header-content p {
+    margin: 0;
+}
